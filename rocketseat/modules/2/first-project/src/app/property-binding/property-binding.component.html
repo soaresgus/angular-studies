@@ -1,0 +1,4 @@
+<input id="my-input" [value]="text" [type]="inputType" [disabled]="inputDisabled" (input)="changeText($event)" />
+<button (click)="disableInput()">Disable input</button>
+<button (click)="activateInput()">Activate input</button>
+<button (click)="logText()">Log text</button>
