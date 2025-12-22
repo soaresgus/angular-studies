@@ -1,0 +1,15 @@
+<h2>Conteúdo por papel</h2>
+
+@if (userRole === 'admin'; as result) {
+<h3>Painel de administrador {{ result }}</h3>
+} @else if (userRole === 'editor') {
+<h3>Painel de editor</h3>
+} @else {
+<h3>Painel de visualização</h3>
+}
+
+<br />
+
+<button (click)="setUserRole('admin')">Definir como Administrador</button>
+<button (click)="setUserRole('editor')">Definir como Editor</button>
+<button (click)="setUserRole('viewer')">Definir como Visualizador</button>
