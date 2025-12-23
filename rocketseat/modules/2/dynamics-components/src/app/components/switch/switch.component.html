@@ -1,0 +1,19 @@
+<h2>Conteudo por papel</h2>
+
+@switch (userRole) {
+@case ('admin') {
+<h3>Painel de admin</h3>
+}
+
+@case ('editor') {
+<h3>Painel de editor</h3>
+}
+
+@default {
+<h3>Painel de visualizador</h3>
+}
+}
+
+<button (click)="setUserRole('admin')">Trocar para admin</button>
+<button (click)="setUserRole('editor')">Trocar para editor</button>
+<button (click)="setUserRole('viewer')">Trocar para visualizador</button>
