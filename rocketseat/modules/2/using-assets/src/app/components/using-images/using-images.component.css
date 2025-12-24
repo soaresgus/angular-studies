@@ -1,0 +1,6 @@
+.container {
+    background-image: url('/images/example-2.jpg');
+    height: 300px;
+    width: 100%;
+    background-size: contain;
+}
