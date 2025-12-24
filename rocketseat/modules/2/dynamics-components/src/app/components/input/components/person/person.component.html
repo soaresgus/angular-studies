@@ -1,0 +1,10 @@
+<div>
+    <p>Nome: {{person.name}}</p>
+    <p>Idade: {{person.age}}</p>
+
+    @if (person.address) {
+    <p>Endereço: {{person.address}}</p>
+    }
+
+    <button (click)="removePerson(person.id)">Remover</button>
+</div>

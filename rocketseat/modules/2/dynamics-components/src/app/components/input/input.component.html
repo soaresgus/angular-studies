@@ -1,0 +1,17 @@
+@let itemsQuantity = getPeopleQuantity();
+
+@if(itemsQuantity) {
+<h1>Existem itens: {{ itemsQuantity }}</h1>
+<h1>Pessoas</h1>
+
+@for (person of people; track person.id) {
+<app-person [person]="person" (removePersonEmit)="removePersonById($event)" />
+} @empty {
+<p>Nenhuma pessoa encontrada</p>
+}
+
+} @else {
+<h1>Sem itens</h1>
+}
+
+<button (click)="removePerson()">Remover item</button>
