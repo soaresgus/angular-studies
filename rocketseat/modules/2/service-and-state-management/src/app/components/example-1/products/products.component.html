@@ -1,0 +1,11 @@
+@for (product of (_productsService.products$ | async); track product.id) {
+<div>
+    <p>Id: {{product.id}}</p>
+    <p>Nome: {{product.name}}</p>
+    <p>Preço: {{product.price}}</p>
+</div>
+}
+
+<button (click)="createProduct()">Criar produto</button>
+<button (click)="removeProduct()">Remover produto</button>
+<button (click)="modifyList()">Modificar lista</button>
