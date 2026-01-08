@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CustomPipe } from './components/custom-pipe/custom-pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [CustomPipe],
+  template: `<app-custom-pipe />`,
 })
 export class App {
-  protected readonly title = signal('pipes');
 }
